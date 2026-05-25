@@ -288,7 +288,7 @@ function reviewerBlock(manualName,observaciones){
   const name=manualName && manualName!=='_________________' ? manualName : (personDisplay(rp) || '_________________');
   const rank=rp?.rank || '_________________';
   const role=rp?.role || 'Revisor legal';
-  const agency=rp?.agency || 'Los Santos County District Attorney's Office';
+  const agency=rp?.agency || "Los Santos County District Attorney's Office";
   const badge=rp?.badge || '_________________';
   return `<div class="doc-sig-block"><div><div class="sig-line"><div class="label">Fiscal / Revisor</div><div class="value">${safe(name)}</div></div><div class="sig-line"><div class="label">Rango</div><div class="value">${safe(rank)}</div></div><div class="sig-line"><div class="label">Rol</div><div class="value">${safe(role)}</div></div></div><div><div class="sig-line"><div class="label">Agencia</div><div class="value">${safe(agency)}</div></div><div class="sig-line"><div class="label">Identificación / Placa</div><div class="value">${safe(badge)}</div></div><div class="sig-line"><div class="label">Fecha de revisión</div><div class="value">${safe(reviewUTC())}</div></div><div class="sig-line"><div class="label">Observaciones</div><div class="value">${safe(observaciones)}</div></div></div></div>`;
 }
